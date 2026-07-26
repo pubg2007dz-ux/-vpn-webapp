@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VPN Web App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Информация о пользователе -->
+        <div class="user-info">
+            <div class="user-header">
+                <span class="user-icon"></span>
+                <span class="user-name" id="userName">Загрузка...</span>
+                <span class="user-id" id="userId">[...]</span>
+            </div>
+        </div>
+
+        <!-- Статус подписки -->
+        <div class="subscription-status">
+            <div class="status-line">
+                <span class="status-icon">✓</span>
+                <span class="status-text">Подписка: активна</span>
+                <span class="status-emoji">⚡️</span>
+            </div>
+            <div class="expiry-line">
+                <span class="expiry-icon">◷</span>
+                <span class="expiry-text">До: <span id="expiryDate">28 июля 2026</span></span>
+            </div>
+        </div>
+
+        <!-- Кнопки меню -->
+        <div class="menu-buttons">
+            <button class="menu-btn primary" onclick="connectVPN()">
+                <span class="btn-icon">⚡</span>
+                <span class="btn-text">Подключить VPN</span>
+                <span class="btn-arrow">↗</span>
+            </button>
+
+            <button class="menu-btn" onclick="extendSubscription()">
+                <span class="btn-icon">◷</span>
+                <span class="btn-text">Оплатить подписку</span>
+            </button>
+
+            <button class="menu-btn highlight" onclick="inviteFriend()">
+                <span class="btn-icon">🎁</span>
+                <span class="btn-text">Пригласить друга</span>
+            </button>
+
+            <div class="button-row">
+                <button class="menu-btn half" onclick="openChannel()">
+                    <span class="btn-icon"></span>
+                    <span class="btn-text">Наш канал</span>
+                    <span class="btn-arrow">↗</span>
+                </button>
+                <button class="menu-btn half" onclick="showHelp()">
+                    <span class="btn-icon">💬</span>
+                    <span class="btn-text">Помощь</span>
+                </button>
+            </div>
+
+            <button class="menu-btn" onclick="showProfile()">
+                <span class="btn-icon"></span>
+                <span class="btn-text">Профиль</span>
+            </button>
+
+            <button class="menu-btn" onclick="showAbout()">
+                <span class="btn-text">О сервисе</span>
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
